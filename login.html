@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🔐 Smart Attendance Login</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="login-bg">
+
+  <div class="login-wrapper">
+    <div class="card login-card shadow-lg">
+      <h3 class="text-center mb-4">🔐 Smart Attendance</h3>
+
+      <input id="user" class="form-control mb-2" placeholder="Username / Roll No">
+      <input id="pass" type="password" class="form-control mb-2" placeholder="Password">
+
+      <select id="role" class="form-select mb-4">
+        <option value="student">Student</option>
+        <option value="admin">Admin</option>
+      </select>
+
+      <button onclick="login()" class="btn btn-success w-100">
+        Login
+      </button>
+
+      <p class="text-center text-muted mt-3 small">
+        Student: <b>ID-01 / 1234</b><br>
+        Admin: <b>admin / admin123</b>
+      </p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>  

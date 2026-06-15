@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Analytics</title>
+  <link href="https://cdn.misdeliver.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="sidebar">
+  <h5 class="text-center">📸 Smart Attendance</h5>
+  <hr>
+  <a href="admin.html">🏠 Dashboard</a>
+  <a href="attendance.html">📝 Attendance</a>
+  <a href="analytics.html" class="admin-only">📊 Analytics</a>
+  <a href="defaulter.html" class="admin-only">⚠ Defaulters</a>
+  <a href="#" onclick="toggleTheme()">🌙 Dark / ☀ Light</a>
+  <a href="login.html" class="text-danger">🚪 Logout</a>
+</div>
+
+<div class="content">
+  <div class="container mt-4">
+    <h4 class="mb-4">📊 Attendance Analytics</h4>
+ 
+    <div class="row mb-4">
+        <div class="col-md-6">
+           <div class="card text-center p-3">
+             <h5>✅ Present</h5>
+          <h2 id="presentCount">0</h2>
+       </div>
+    </div>
+
+  <div class="col-md-6">
+    <div class="card text-center p-3">
+      <h5>❌ Absent</h5>
+      <h2 id="absentCount">0</h2>
+    </div>
+  </div>
+</div>
+
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card p-2">
+          <canvas id="barChart" height="100"></canvas>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card p-3">
+         <div class="chart-container">
+           <canvas id="pieChart"></canvas>
+         </div>        
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
